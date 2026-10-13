@@ -70,7 +70,7 @@ insert into questions (module, category_id, topic, question, options, correct_in
   ('aptitude', 'quant', 'Time & Work', 'A can finish a job in 12 days and B in 18 days. Working together, how many days will they take?', '["6 days", "7.2 days", "8 days", "15 days"]'::jsonb, 1, 'Combined rate = 1/12 + 1/18 = 5/36 per day, so 36/5 = 7.2 days.', 'Easy', 27),
   ('aptitude', 'quant', 'Time & Work', '10 men can finish a job in 15 days. How many days will 25 men take?', '["5 days", "6 days", "8 days", "10 days"]'::jsonb, 1, 'Man-days = 150; 150 / 25 = 6 days.', 'Easy', 28),
   ('aptitude', 'quant', 'Time & Work', 'A can do a job in 10 days. He works for 4 days and B finishes the rest in 9 days. In how many days can B alone do the whole job?', '["12 days", "15 days", "18 days", "20 days"]'::jsonb, 1, 'A did 4/10 = 2/5; the remaining 3/5 took B 9 days, so the full job takes 15 days.', 'Medium', 29),
-  ('aptitude', 'quant', 'Time, Speed & Distance', 'Convert 72 km/h into m/s.', '["18 m/s", "20 m/s", "15 m/s", "25 m/s"]'::jsonb, 1, 'Multiply by 5/18: 72 x 5/18 = 20.', 'Easy', 30),
+  ('aptitude', 'quant', 'Time, Speed & Distance', 'Convert 72 km/h to m/s.', '["20 m/s", "15 m/s", "25 m/s", "18 m/s"]'::jsonb, 0, 'Multiply by 5/18: 72 x 5/18 = 20.', 'Easy', 30),
   ('aptitude', 'quant', 'Time, Speed & Distance', 'How long does a car travelling at 50 km/h take to cover 150 km?', '["2 hours", "3 hours", "4 hours", "5 hours"]'::jsonb, 1, 'Time = distance / speed = 150 / 50 = 3.', 'Easy', 31),
   ('aptitude', 'quant', 'Time, Speed & Distance', 'A car goes from A to B at 60 km/h and returns at 40 km/h. What is its average speed for the whole trip?', '["52 km/h", "50 km/h", "48 km/h", "45 km/h"]'::jsonb, 2, 'Average speed = 2xy/(x+y) = 2 x 60 x 40 / 100 = 48.', 'Medium', 32),
   ('aptitude', 'quant', 'Problems on Ages', 'A father is three times as old as his son. The sum of their ages is 48. How old is the son?', '["10", "12", "14", "16"]'::jsonb, 1, 'Son = x, father = 3x, 4x = 48, so x = 12.', 'Easy', 33),
@@ -231,10 +231,10 @@ insert into questions (module, category_id, topic, question, options, correct_in
   ('technical', 'cs-core', 'Operating Systems', 'Round Robin scheduling gives each process a fixed:', '["Burst length", "Page size", "Time quantum", "Priority"]'::jsonb, 2, 'Each process runs for one time quantum before the next is scheduled.', 'Easy', 188),
   ('technical', 'cs-core', 'Computer Networks', 'How many layers does the OSI model have?', '["4", "5", "7", "9"]'::jsonb, 2, 'Physical, data link, network, transport, session, presentation, application.', 'Easy', 189),
   ('technical', 'cs-core', 'Computer Networks', 'What is the default port for HTTP?', '["21", "25", "80", "443"]'::jsonb, 2, 'HTTP uses port 80; HTTPS uses 443.', 'Easy', 190),
-  ('technical', 'cs-core', 'Computer Networks', 'Which protocol translates domain names into IP addresses?', '["ARP", "DHCP", "FTP", "DNS"]'::jsonb, 3, 'The Domain Name System maps names to IP addresses.', 'Easy', 191),
+  ('technical', 'cs-core', 'Computer Networks', 'Which protocol translates domain names to IP addresses?', '["DNS", "ARP", "DHCP", "FTP"]'::jsonb, 0, 'The Domain Name System maps names to IP addresses.', 'Easy', 191),
   ('technical', 'cs-core', 'Computer Networks', 'Which IP version uses 128-bit addresses?', '["IPv6", "ICMP", "IPv4", "ARP"]'::jsonb, 0, 'IPv4 is 32-bit; IPv6 is 128-bit.', 'Easy', 192),
   ('technical', 'cs-core', 'Computer Networks', 'Which transport-layer protocol is connection-oriented?', '["IP", "ICMP", "TCP", "UDP"]'::jsonb, 2, 'TCP establishes a connection and guarantees ordered delivery.', 'Easy', 193),
-  ('technical', 'cs-core', 'OOP', 'Wrapping data and the methods that operate on it into a single unit is called:', '["Polymorphism", "Abstraction", "Inheritance", "Encapsulation"]'::jsonb, 3, 'Encapsulation bundles data and behaviour and restricts direct access.', 'Easy', 194),
+  ('technical', 'cs-core', 'OOP', 'Wrapping data and the methods that operate on it in a single unit is called:', '["Inheritance", "Abstraction", "Polymorphism", "Encapsulation"]'::jsonb, 3, 'Encapsulation bundles data and behaviour and restricts direct access.', 'Easy', 194),
   ('technical', 'cs-core', 'OOP', 'The ability of an object to take many forms is called:', '["Encapsulation", "Inheritance", "Polymorphism", "Abstraction"]'::jsonb, 2, 'Polymorphism lets one interface behave differently for different types.', 'Easy', 195),
   ('technical', 'cs-core', 'OOP', 'Deriving a new class from an existing class is called:', '["Compilation", "Overloading", "Inheritance", "Linking"]'::jsonb, 2, 'The derived class reuses the base class''s members.', 'Easy', 196),
   ('technical', 'cs-core', 'OOP', 'Showing only essential features while hiding implementation details is called:', '["Iteration", "Recursion", "Inheritance", "Abstraction"]'::jsonb, 3, 'Abstraction exposes what an object does, not how.', 'Easy', 197),
@@ -250,7 +250,7 @@ insert into questions (module, category_id, topic, question, options, correct_in
   ('technical', 'webdev', 'CSS', 'Which CSS property changes the text colour?', '["foreground", "color", "text-color", "font-color"]'::jsonb, 1, 'color sets the foreground colour of text.', 'Easy', 207),
   ('technical', 'webdev', 'CSS', 'Which selector targets elements with class "box"?', '[".box", "#box", "*box", "box"]'::jsonb, 0, 'A leading dot selects a class; # selects an id.', 'Easy', 208),
   ('technical', 'webdev', 'CSS', 'In the CSS box model, what is the order from the inside out?', '["Content, padding, border, margin", "Margin, border, padding, content", "Content, border, padding, margin", "Padding, content, margin, border"]'::jsonb, 0, 'Content is surrounded by padding, then border, then margin.', 'Medium', 209),
-  ('technical', 'webdev', 'CSS', 'Which display value turns an element into a flex container?', '["float", "block", "inline-block", "flex"]'::jsonb, 3, 'display: flex enables the flexbox layout.', 'Easy', 210),
+  ('technical', 'webdev', 'CSS', 'Which display value makes an element a flex container?', '["float", "block", "inline-block", "flex"]'::jsonb, 3, 'display: flex enables the flexbox layout.', 'Easy', 210),
   ('technical', 'webdev', 'CSS', 'Which property makes text bold?', '["font-style", "bold", "font-weight", "text-weight"]'::jsonb, 2, 'font-weight: bold (or 700) sets boldness.', 'Easy', 211),
   ('technical', 'webdev', 'JavaScript', 'Which keyword declares a block-scoped variable that can be reassigned?', '["static", "let", "const", "var"]'::jsonb, 1, 'let is block scoped and reassignable; const cannot be reassigned.', 'Easy', 212),
   ('technical', 'webdev', 'JavaScript', 'What does typeof null return in JavaScript?', '["\"null\"", "\"undefined\"", "\"number\"", "\"object\""]'::jsonb, 3, 'This is a long-standing quirk of the language.', 'Medium', 213),
@@ -291,7 +291,7 @@ insert into questions (module, category_id, topic, question, options, correct_in
   ('technical', 'other', 'AI/ML Basics', 'Supervised learning is trained using:', '["Random noise", "Labelled data", "No data", "Unlabelled data only"]'::jsonb, 1, 'Each training example comes with the correct answer.', 'Easy', 248),
   ('technical', 'other', 'AI/ML Basics', 'What is overfitting?', '["A model trains too quickly", "A model is too simple to learn anything", "A model performs well on training data but poorly on new data", "A model uses too little memory"]'::jsonb, 2, 'An overfit model has memorised the training set.', 'Medium', 249),
   ('technical', 'other', 'AI/ML Basics', 'Which of these algorithms is used for classification?', '["Principal component analysis", "K-means clustering", "Apriori", "Logistic regression"]'::jsonb, 3, 'Logistic regression predicts class labels; K-means and PCA are unsupervised.', 'Medium', 250),
-  ('technical', 'other', 'Cyber Security Basics', 'What is phishing?', '["Tricking people into revealing sensitive information through fake messages or sites", "Scanning a network for open ports", "Encrypting files for ransom", "Overloading a server with traffic"]'::jsonb, 0, 'Phishing relies on deception, usually email or fake websites.', 'Easy', 251),
+  ('technical', 'other', 'Cyber Security Basics', 'What is phishing?', '["Fake messages or websites that fool people so they give away sensitive information", "Scanning a network for open ports", "Encrypting files for ransom", "Overloading a server with traffic"]'::jsonb, 0, 'Phishing relies on deception, usually email or fake websites.', 'Easy', 251),
   ('technical', 'other', 'Cyber Security Basics', 'Which protocol encrypts web traffic between a browser and a site?', '["Telnet", "FTP", "HTTPS (TLS)", "SMTP"]'::jsonb, 2, 'HTTPS is HTTP over TLS.', 'Easy', 252),
   ('technical', 'other', 'Cyber Security Basics', 'Which password is the strongest?', '["A short, memorable word", "password123", "A long, unique mix of letters, numbers and symbols", "Your birth date"]'::jsonb, 2, 'Length, variety and uniqueness make a password hard to guess.', 'Easy', 253),
   ('hr', 'hr-sjt', 'Situational Judgement', 'A teammate misses a deadline that affects your part of the project. What is the best first step?', '["Quietly do their work and say nothing", "Report them to the manager immediately", "Complain about it to other colleagues", "Talk to them privately to understand the problem and offer help"]'::jsonb, 3, 'Understanding the cause first and offering support keeps the relationship and the project on track.', 'Medium', 254),
@@ -326,7 +326,7 @@ insert into questions (module, category_id, topic, question, options, correct_in
   ('interview', 'int-general', 'General Interview', 'Where do you see yourself in the next few years?', '[]'::jsonb, null, null, 'Medium', 283),
   ('interview', 'int-technical', 'Technical Interview', 'Explain the difference between a stack and a queue.', '[]'::jsonb, null, null, 'Medium', 284),
   ('interview', 'int-technical', 'Technical Interview', 'How does a hash map achieve average O(1) lookup?', '[]'::jsonb, null, null, 'Medium', 285),
-  ('interview', 'int-technical', 'Technical Interview', 'What happens when you type a URL into a browser?', '[]'::jsonb, null, null, 'Medium', 286),
+  ('interview', 'int-technical', 'Technical Interview', 'What happens when you type a URL in a browser?', '[]'::jsonb, null, null, 'Medium', 286),
   ('interview', 'int-technical', 'Technical Interview', 'Explain the concept of time complexity with an example.', '[]'::jsonb, null, null, 'Medium', 287),
   ('interview', 'int-technical', 'Technical Interview', 'How would you design a rate limiter?', '[]'::jsonb, null, null, 'Medium', 288),
   ('interview', 'int-hr', 'HR Interview', 'Tell me about yourself.', '[]'::jsonb, null, null, 'Medium', 289),
@@ -457,7 +457,7 @@ def min_window(s, t):
                 hi = mid - 1
     return -1
 ', 2),
-  ('searching', 'Split Array Largest Sum', 'Hard', 'Given an array of non-negative integers nums and an integer k, split the array into k non-empty contiguous subarrays so that the largest subarray sum is as small as possible. Return that minimised largest sum. Hint: binary search on the answer.', 'An array nums and an integer k.', 'The minimised largest subarray sum.', '[{"input": "nums = [7, 2, 5, 10, 8], k = 2", "output": "18"}]'::jsonb, '1 <= n <= 1000, 1 <= k <= n', '{"Python": "def split_array(nums, k):\n    # TODO: write your solution\n    pass\n"}'::jsonb, 'def split_array(nums, k):
+  ('searching', 'Split Array Largest Sum', 'Hard', 'Given an array of non-negative integers nums and an integer k, split the array in k non-empty contiguous subarrays so that the largest subarray sum is as small as possible. Return that minimised largest sum. Hint: binary search on the answer.', 'An array nums and an integer k.', 'The minimised largest subarray sum.', '[{"input": "nums = [7, 2, 5, 10, 8], k = 2", "output": "18"}]'::jsonb, '1 <= n <= 1000, 1 <= k <= n', '{"Python": "def split_array(nums, k):\n    # TODO: write your solution\n    pass\n"}'::jsonb, 'def split_array(nums, k):
     lo, hi = max(nums), sum(nums)
     while lo < hi:
         mid = (lo + hi) // 2
@@ -529,7 +529,7 @@ def min_window(s, t):
     slow.next = slow.next.next
     return dummy.next
 ', 2),
-  ('linkedlist', 'Merge K Sorted Lists', 'Hard', 'You are given k sorted linked lists. Merge them into one sorted linked list and return its head.', 'k sorted linked lists.', 'The values of the merged sorted list.', '[{"input": "[1 -> 4 -> 5], [1 -> 3 -> 4], [2 -> 6]", "output": "1 -> 1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6"}]'::jsonb, '0 <= k <= 10^4, total nodes <= 10^4', '{"Python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef merge_k_lists(lists):\n    # TODO: write your solution\n    pass\n"}'::jsonb, 'import heapq
+  ('linkedlist', 'Merge K Sorted Lists', 'Hard', 'You are given k sorted linked lists. Merge them to form one sorted linked list and return its head.', 'k sorted linked lists.', 'The values of the merged sorted list.', '[{"input": "[1 -> 4 -> 5], [1 -> 3 -> 4], [2 -> 6]", "output": "1 -> 1 -> 2 -> 3 -> 4 -> 4 -> 5 -> 6"}]'::jsonb, '0 <= k <= 10^4, total nodes <= 10^4', '{"Python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\ndef merge_k_lists(lists):\n    # TODO: write your solution\n    pass\n"}'::jsonb, 'import heapq
 
 def merge_k_lists(lists):
     heap = [(node.val, i, node) for i, node in enumerate(lists) if node]
@@ -745,7 +745,7 @@ def dijkstra(n, edges, source):
             dp[c] = max(dp[c], dp[c - w] + v)
     return dp[capacity]
 ', 2),
-  ('dp', 'Edit Distance', 'Hard', 'Given two strings word1 and word2, return the minimum number of operations (insert, delete or replace a character) needed to convert word1 into word2.', 'Two strings word1 and word2.', 'The minimum number of operations.', '[{"input": "word1 = horse, word2 = ros", "output": "3"}]'::jsonb, '0 <= |word1|, |word2| <= 500', '{"Python": "def min_distance(word1, word2):\n    # TODO: write your solution\n    pass\n"}'::jsonb, 'def min_distance(word1, word2):
+  ('dp', 'Edit Distance', 'Hard', 'Given two strings word1 and word2, return the minimum number of operations (insert, delete or replace a character) needed to convert word1 to word2.', 'Two strings word1 and word2.', 'The minimum number of operations.', '[{"input": "word1 = horse, word2 = ros", "output": "3"}]'::jsonb, '0 <= |word1|, |word2| <= 500', '{"Python": "def min_distance(word1, word2):\n    # TODO: write your solution\n    pass\n"}'::jsonb, 'def min_distance(word1, word2):
     m, n = len(word1), len(word2)
     prev = list(range(n + 1))
     for i in range(1, m + 1):
